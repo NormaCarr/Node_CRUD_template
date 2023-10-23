@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}{{ person.fullName }} {% endblock %}
+
+{% block content %}
+<style>
+    .btn1:hover {
+        background-color: ;
+        color: black;
+        width: 108px;
+        border: 5px solid red;
+      }
+</style>
+
+<h1>{{ person.fullName }} </h1>
+
+<div class="row">
+
+  <div class="col-6">
+
+    <p><b>Phone: </b> {{ person.phone }}</p>
+    <p><b>Notes: </b>{{ person.notes }}</p>
+
+    <p><a class="btn btn-primary" href="/{{ person.id }}/edit/">Edit</a></p>
+
+    <p><div class="btn1" title="Warning! Are you sure?"><a class="btn btn-primary" href="/{{ person.id }}/delete/">Delete</a></div></p>
+    <a href="/" class="btn btn-danger">Cancel</a>
+  </div>
+</div>
+
+{% endblock %}
