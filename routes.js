@@ -22,11 +22,9 @@ router.get("/", async function(req, res, next) {
 
 
 router.get("/list", async function(req, res, next) {
-  
+   
   try {
     const personas = await Person.all();
-    
-    console.log(personas);
     return res.render("person_list.html",{personas});
   } catch (err) {
     return next(err);

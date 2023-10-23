@@ -12,7 +12,7 @@ const BCRYPT_WORK_FACTOR = 10;
 
 const DB_URI =
   process.env.NODE_ENV === 'test'
-    ? 'postgresql://postgres:metal@localhost:5432/persona_db_test'
+    ? 'postgresql://postgres:metal@localhost:5432/persona_db'
     : 'postgresql://postgres:metal@localhost:5432/persona_db';
 
 module.exports = {
